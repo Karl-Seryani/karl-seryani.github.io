@@ -213,3 +213,7 @@ footer > p { color: var(--ink); }
 .evidence-figure img { display: block; max-width: 100%; height: auto; border: 1px solid var(--line); border-radius: 4px; }
 .evidence-figure a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
 .evidence-figure figcaption { margin-top: .7rem; max-width: 62ch; color: var(--muted); font-size: .875rem; line-height: 1.6; }
+
+/* Frame the supplied gameplay screenshot inside its recorded picture area. */
+.hunter-frame { position: relative; overflow: hidden; aspect-ratio: 2714 / 1700; border: 1px solid var(--line); border-radius: 3px; }
+#the-order .hunter-frame img { position: absolute; width: 111.4223%; max-width: none; height: auto; max-height: none; left: -6.4112%; top: -9.7059%; border: 0; border-radius: 0; transform: none; }
