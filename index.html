@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Karl Seryani | Bug Bounty Researcher | CWES</title>
+<meta name="description" content="Karl Seryani, bug bounty researcher and HTB Certified Web Exploitation Specialist (CWES). Security research, software, and projects.">
+<meta name="theme-color" content="#101214">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<link rel="canonical" href="https://karl-seryani.github.io/">
+</head>
+<body>
+<a class="skip" href="#security">Skip to research</a>
+<header class="site-header"><a href="#top" class="wordmark" aria-label="Karl Seryani, back to top">ks<span>.</span></a><nav aria-label="Main navigation"><a href="#security">Research</a><a href="#work">Projects</a><a href="#experience">Experience</a><a href="#about">About</a></nav><a class="resume-link" href="assets/Karl-Seryani-Resume.pdf">Resume <span>PDF</span></a></header>
+<main id="top">
+<section class="hero" aria-labelledby="name-heading"><div class="hero-copy"><h1 id="name-heading">Karl Seryani</h1><p class="intro">Bug bounty researcher. <span>CWES certified.</span></p><div class="hero-links"><a href="mailto:karlseryani@gmail.com">Email me</a><a href="https://github.com/Karl-Seryani">GitHub</a><a href="https://www.linkedin.com/in/karlseryani">LinkedIn</a><a href="https://www.credly.com/badges/754b86be-3909-43e1-b980-5ab812c9e6cb/linked_in_profile" aria-label="View Hack The Box CWES certification">HTB CWES</a></div></div></section>
+<section class="experience-section" id="security" aria-labelledby="security-heading">
+<div class="section-heading"><h2 id="security-heading">Security research</h2><p>April 2026 to present</p></div>
+<div class="research-overview"><p>Security research across web applications and enterprise software. Stored XSS leading to account takeover in NASA’s GLOBE platform.</p><p>Top 15 in Keeper Security’s Hall of Fame. $12,000 in bounties. More than 30 vulnerabilities reported across 18 programs.</p><a href="https://bugcrowd.com/karl001">Bugcrowd profile</a></div>
+<div class="security-writeups" aria-label="Selected security findings">
+<article class="security-finding" id="keeper-release-notes" aria-labelledby="keeper-release-notes-heading">
+<div class="finding-meta"><p class="finding-vendor">Keeper Security</p><p class="finding-status">Release notes</p></div>
+<div class="finding-story"><h3 id="keeper-release-notes-heading"><a href="https://docs.keeper.io/release-notes/backend/backend-api/backend-api-18.1.0">Backend API 18.1.0</a></h3><a class="writeup-link" href="https://docs.keeper.io/release-notes/backend/backend-api/backend-api-18.1.0">Read Keeper’s release notes <span aria-hidden="true">→</span></a></div>
+</article>
+<article class="security-finding" id="nasa-stored-xss" aria-labelledby="nasa-finding-heading">
+<div class="finding-meta"><p class="finding-vendor">NASA</p><p class="finding-severity">High (P2)</p><p class="finding-status">Unresolved</p></div>
+<div class="finding-story"><h3 id="nasa-finding-heading"><a href="research/nasa-stored-xss/">Stored XSS leading to account takeover</a></h3><p class="finding-deck">Stored script execution led to an authenticated session for another account.</p><a class="writeup-link" href="research/nasa-stored-xss/" aria-label="Read writeup: Stored XSS leading to account takeover">Read writeup <span aria-hidden="true">→</span></a></div>
+</article>
+</div></section>
+<section id="work" aria-labelledby="work-heading">
+<div class="section-heading"><h2 id="work-heading">Selected work</h2><p>Software, research, and design</p></div>
+<article class="project" id="studio">
+<figure class="project-image"><img src="assets/studio-workshop-800.webp" srcset="assets/studio-workshop-800.webp 800w, assets/studio-workshop-1600.webp 1600w" sizes="(max-width: 720px) 90vw, (max-width: 1200px) 88vw, 1056px" alt="Studio's 3D workspace showing an editable blue task lamp and its movement controls" width="1600" height="1045" loading="lazy" decoding="async"><figcaption>Studio's current workshop</figcaption></figure>
+<div class="project-copy"><div><h3>Studio</h3><p class="project-kind">2D/3D design tool</p><p class="status">Work in progress</p></div><div><p class="lead">Draw a shape. Turn it into a 3D object. Move and assemble it with your hands or voice.</p><p>A local workshop combining sketching, 3D editing, and webcam hand tracking. Mouse and keyboard controls are also supported.</p><details><summary>Explore Studio</summary><div class="detail-body"><p>The current prototype supports 2D sketches, 3D shapes, object assembly, local voice commands, saved versions, and export for 3D printing.</p><p>Hand tracking and voice commands run locally. You can edit with gestures, speak commands, or use the mouse and keyboard. Saved versions and undo let you return to earlier work.</p>
+<figure><img src="assets/studio-house-800.webp" srcset="assets/studio-house-800.webp 800w, assets/studio-house-1600.webp 1600w" sizes="(max-width: 720px) 90vw, (max-width: 900px) calc(88vw - 220.8px), (max-width: 1200px) calc(88vw - 280px), 776px" alt="A house model in Studio with editable dimensions and a pitched roof" width="1600" height="1045" loading="lazy" decoding="async"><figcaption>A room layout built in the current prototype</figcaption></figure>
+<h4>Current focus</h4><p>Moving from a sketch to connected parts, then testing how those parts move. The current simulations cover limited examples. Physical accuracy is still unverified.</p>
+</div></details></div></div>
+</article>
+
+<article class="project" id="the-order">
+<figure class="project-image"><img src="assets/the-order-hunter_encounter-800.webp" srcset="assets/the-order-hunter_encounter-800.webp 800w, assets/the-order-hunter_encounter-1600.webp 1600w" sizes="(max-width: 720px) 90vw, (max-width: 1200px) 88vw, 1056px" alt="The Hunter approaching the player in a dark asylum corridor in The Order" width="1600" height="1040" loading="lazy" decoding="async"><figcaption>The Hunter</figcaption></figure>
+<div class="project-copy"><div><h3>The Order</h3><p class="project-kind">First-person horror game</p><p class="project-kind">Unity / C#</p></div><div>
+<p class="lead">Escape an abandoned asylum while a creature tracks your movements.</p>
+<p>A solo Unity project built around sound, limited visibility, and finding the tools to escape. The Hunter patrols, investigates noise, and chases the player.</p>
+<div class="project-links"><a href="https://github.com/Karl-Seryani/The-Order">View project</a></div>
+<details><summary>Inside the game</summary><div class="detail-body"><h4>Making the pursuit work</h4><p>The Hunter reacts to sight, footsteps, and the player’s flashlight. Its movement and hearing account for the building’s two floors.</p><h4>Giving each room a purpose</h4><p>Keys and tools open new areas. Clues guide players toward hidden items. Harder difficulty settings require repairing a car to escape.</p><h4>Balancing risk</h4><p>A three-day run keeps item progress after early deaths. The final day is the last chance to get out. Difficulty settings change how the Hunter detects the player.</p>
+<figure><img src="assets/the-order-hallway-800.webp" srcset="assets/the-order-hallway-800.webp 800w, assets/the-order-hallway-1600.webp 1600w" sizes="(max-width: 720px) 90vw, (max-width: 900px) calc(88vw - 220.8px), (max-width: 1200px) calc(88vw - 280px), 776px" alt="A narrow, dimly lit hallway in The Order" width="1600" height="1040" loading="lazy" decoding="async"><figcaption>Lighting and narrow corridors limit what the player can see.</figcaption></figure></div></details>
+</div></div></article>
+<article class="project text-project" id="betterprompt">
+<div class="project-copy"><div><h3>BetterPrompt</h3><p class="project-kind">Developer tool</p><p class="project-kind">VS Code extension</p></div><div>
+<p class="lead">Give Copilot the project context you would otherwise have to type out.</p>
+<p>A VS Code extension that expands short requests with context from the current file, selected code, project structure, and errors.</p>
+<div class="prompt-example"><p class="example-label">Example request</p><code>@betterprompt make a login page</code><p>BetterPrompt uses the open workspace to add relevant details before the request goes to Copilot.</p></div>
+<div class="project-links"><a href="https://github.com/Karl-Seryani/BetterPrompt">View project</a></div>
+<details><summary>How it works</summary><div class="detail-body"><p>The default mode lets you review the expanded request first. An optional automatic mode sends it directly to Copilot. Deeper code analysis is opt-in.</p><p>It uses the editor’s Copilot connection and requires a GitHub Copilot subscription.</p></div></details>
+</div></div></article>
+<article class="project text-project research-project" id="ai-research">
+<div class="project-copy"><div><h3>Social engineering AI</h3><p class="project-kind">Independent research</p><p class="project-kind">April 2026</p></div><div>
+<p class="lead">What happens when an AI trusts a made-up explanation?</p>
+<p>A documented case of a false security-lab claim changing an AI assistant’s responses. The paper examines how conversational context can weaken safeguards.</p>
+<p>It is a single-session case study, with its limits stated in the paper.</p>
+<div class="project-links"><a href="https://karl-seryani.github.io/ai-social-engineering/">Read the paper</a></div>
+<details><summary>About the study</summary><div class="detail-body"><p>The study follows the assistant’s change in behavior and discusses checking context before relying on it. It used fictional documents inside AI chat sessions.</p><p>No real hiring system was tested. The study does not establish how often the same result would occur across other sessions or models.</p></div></details>
+</div></div></article>
+</section>
+<section class="experience-section" id="experience" aria-labelledby="experience-heading">
+<div class="section-heading"><h2 id="experience-heading">Experience</h2></div>
+
+<article class="experience-entry"><div><h3>OWASP ZAP</h3><p class="date">Open source contributor</p></div><div><p>Three merged contributions to a widely used web security scanner: example alerts and tests for three scan rules, plus simpler alert-building code.</p><ul class="contribution-links"><li><a href="https://github.com/zaproxy/zap-extensions/pull/7288">LDAP injection example alerts</a></li><li><a href="https://github.com/zaproxy/zap-extensions/pull/7249">Username enumeration example alert</a></li><li><a href="https://github.com/zaproxy/zap-extensions/pull/7224">SQLite injection example alerts</a></li></ul></div></article>
+<article class="experience-entry" id="hatchloom"><div><h3>Hatchloom Inc.</h3><p class="date">Software Developer Intern</p></div><div><p>Delivered a production-ready learning and community platform for desktop, tablet, and mobile.</p><p>Built the Node.js and PostgreSQL backend for accounts and content, with secure sign-in and role-based access. Automated deployments to AWS EC2.</p></div></article>
+<article class="experience-entry"><div><h3>Kaimz Inc.</h3><p class="date">Cybersecurity intern<br>January to April 2025</p></div><div><p>Reduced manual security alert review time by about 35% through automated sorting and routing.</p><p>Work also covered log analysis, detection rules, and gaps in the team’s monitoring.</p></div></article>
+</section>
+<section class="about-section" id="about" aria-labelledby="about-heading"><div class="section-heading"><h2 id="about-heading">About</h2></div><div class="about-copy"><p>Computer science graduate from Western University, with work spanning web security, game development, and 2D/3D design.</p><p>Graduated in April 2026 with two Dean’s Honour List recognitions. Earned the HTB Certified Web Exploitation Specialist certification in July 2026.</p><a href="assets/Karl-Seryani-Resume.pdf">Read my resume</a></div></section>
+<footer><p>Karl Seryani</p><a href="mailto:karlseryani@gmail.com">karlseryani@gmail.com</a><a href="#top">Back to top</a></footer>
+</main>
+<script type="module" src="site.js"></script></body></html>
