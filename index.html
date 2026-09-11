@@ -18,13 +18,21 @@
 <div class="section-heading"><h2 id="security-heading">Security research</h2><p>April 2026 to present</p></div>
 <div class="research-overview"><p>Security research across web applications and enterprise software. Stored XSS leading to account takeover in NASA’s GLOBE platform.</p><p>Top 15 in Keeper Security’s Hall of Fame. $12,000 in bounties. More than 30 vulnerabilities reported across 18 programs.</p><a href="https://bugcrowd.com/karl001">Bugcrowd profile</a></div>
 <div class="security-writeups" aria-label="Selected security findings">
-<article class="security-finding" id="keeper-release-notes" aria-labelledby="keeper-release-notes-heading">
-<div class="finding-meta"><p class="finding-vendor">Keeper Security</p><p class="finding-status">Release notes</p></div>
-<div class="finding-story"><h3 id="keeper-release-notes-heading"><a href="https://docs.keeper.io/release-notes/backend/backend-api/backend-api-18.1.0">Backend API 18.1.0</a></h3><a class="writeup-link" href="https://docs.keeper.io/release-notes/backend/backend-api/backend-api-18.1.0">Read Keeper’s release notes <span aria-hidden="true">→</span></a></div>
+<article class="security-finding" id="sql-injection" aria-labelledby="sql-injection-heading">
+<div class="finding-meta"><p class="finding-vendor">Keeper Security</p><p class="finding-severity">High (P2)</p><p class="finding-status">Resolved</p></div>
+<div class="finding-story"><h3 id="sql-injection-heading">SQL injection leading to account takeover</h3><p class="finding-deck">Fixed a SQL injection issue in an automated database password management service. The issue allowed an unauthorized password change on a separate database account, leading to account takeover. The fix separated user-controlled values from database commands.</p></div>
+</article>
+<article class="security-finding" id="access-control-rce" aria-labelledby="access-control-heading">
+<div class="finding-meta"><p class="finding-vendor">Keeper Security</p><p class="finding-severity">Medium (P3)</p><p class="finding-status">Resolved</p></div>
+<div class="finding-story"><h3 id="access-control-heading">Broken access control leading to RCE</h3><p class="finding-deck">Fixed an authorization issue that allowed non-admin record editors to reach a privileged execution feature. The issue led to code execution in the backend service. The fix restored the required permission checks.</p></div>
+</article>
+<article class="security-finding" id="device-approval-bypass" aria-labelledby="device-approval-heading">
+<div class="finding-meta"><p class="finding-vendor">Keeper Security</p><p class="finding-severity">High (P2)</p><p class="finding-status">Resolved</p></div>
+<div class="finding-story"><h3 id="device-approval-heading">Device approval bypass</h3><p class="finding-deck">Fixed a device approval bypass in the biometric/passkey login flow. An affected request could skip device approval and proceed to authentication. Authentication, MFA, biometric checks, and brute-force protection remained enforced.</p><p class="finding-deck">Keeper released the fix in Backend API 18.1.0 within 24 hours of validating the report and publicly credited Karl Seryani.</p><a class="writeup-link" href="https://docs.keeper.io/release-notes/backend/backend-api/backend-api-18.1.0">View Keeper’s recognition <span aria-hidden="true">→</span></a></div>
 </article>
 <article class="security-finding" id="nasa-stored-xss" aria-labelledby="nasa-finding-heading">
 <div class="finding-meta"><p class="finding-vendor">NASA</p><p class="finding-severity">High (P2)</p><p class="finding-status">Unresolved</p></div>
-<div class="finding-story"><h3 id="nasa-finding-heading"><a href="research/nasa-stored-xss/">Stored XSS leading to account takeover</a></h3><p class="finding-deck">Stored script execution led to an authenticated session for another account.</p><a class="writeup-link" href="research/nasa-stored-xss/" aria-label="Read writeup: Stored XSS leading to account takeover">Read writeup <span aria-hidden="true">→</span></a></div>
+<div class="finding-story"><h3 id="nasa-finding-heading">Stored XSS leading to account takeover</h3><p class="finding-deck">Validated a high-severity stored XSS issue in NASA’s GLOBE platform that led to an authenticated session for another account. The report remains unresolved.</p></div>
 </article>
 </div></section>
 <section id="work" aria-labelledby="work-heading">
