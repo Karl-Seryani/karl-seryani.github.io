@@ -6,7 +6,7 @@
 <meta name="description" content="Karl Seryani, bug bounty researcher and HTB Certified Web Exploitation Specialist (CWES). Security research, software, and projects.">
 <meta name="theme-color" content="#101214">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=hunter-frame-1">
+<link rel="stylesheet" href="style.css?v=design-studio-2">
 <link rel="canonical" href="https://karl-seryani.github.io/">
 </head>
 <body>
@@ -38,12 +38,26 @@
 <section id="work" aria-labelledby="work-heading">
 <div class="section-heading"><h2 id="work-heading">Selected work</h2><p>Software, research, and design</p></div>
 <article class="project" id="studio">
-<figure class="project-image"><img src="assets/studio-workshop-800.webp" srcset="assets/studio-workshop-800.webp 800w, assets/studio-workshop-1600.webp 1600w" sizes="(max-width: 720px) 90vw, (max-width: 1200px) 88vw, 1056px" alt="Studio's 3D workspace showing an editable blue task lamp and its movement controls" width="1600" height="1045" loading="lazy" decoding="async"><figcaption>Studio's current workshop</figcaption></figure>
-<div class="project-copy"><div><h3>Studio</h3><p class="project-kind">2D/3D design tool</p><p class="status">Work in progress</p></div><div><p class="lead">Draw a shape. Turn it into a 3D object. Move and assemble it with your hands or voice.</p><p>A local workshop combining sketching, 3D editing, and webcam hand tracking. Mouse and keyboard controls are also supported.</p><details><summary>Explore Studio</summary><div class="detail-body"><p>The current prototype supports 2D sketches, 3D shapes, object assembly, local voice commands, saved versions, and export for 3D printing.</p><p>Hand tracking and voice commands run locally. You can edit with gestures, speak commands, or use the mouse and keyboard. Saved versions and undo let you return to earlier work.</p>
-<figure><img src="assets/studio-house-800.webp" srcset="assets/studio-house-800.webp 800w, assets/studio-house-1600.webp 1600w" sizes="(max-width: 720px) 90vw, (max-width: 900px) calc(88vw - 220.8px), (max-width: 1200px) calc(88vw - 280px), 776px" alt="A house model in Studio with editable dimensions and a pitched roof" width="1600" height="1045" loading="lazy" decoding="async"><figcaption>A room layout built in the current prototype</figcaption></figure>
-<h4>Current focus</h4><p>Moving from a sketch to connected parts, then testing how those parts move. The current simulations cover limited examples. Physical accuracy is still unverified.</p>
-</div></details></div></div>
-</article>
+<figure class="project-image"><img src="assets/studio-sketch-800.webp" srcset="assets/studio-sketch-800.webp 800w, assets/studio-sketch-1600.webp 1600w" sizes="(max-width: 720px) 90vw, (max-width: 1200px) 88vw, 1056px" alt="A measured ground floor plan in Studio with two labelled rooms, a stair run, and wall openings" width="1600" height="1040" loading="lazy" decoding="async"><figcaption>A ground floor plan in the sketch view</figcaption></figure>
+<div class="project-copy"><div><h3>Studio</h3><p class="project-kind">2D/3D design tool</p><p class="project-kind">Swift / three.js / Blender</p><p class="status">In active development, 2026</p></div><div>
+<p class="lead">Draw a house plan. Blender builds it. Inspect the result with your hands.</p>
+<p>A native Mac workspace for precise 2D sketching and full house layouts. Walls, doors, windows, rooms, levels, slabs, roofs, stairs, and furniture placements are drawn to real dimensions, over calibrated image underlays.</p>
+<p>Blender builds the physical geometry through a Python bridge. Studio inspects the build with the trackpad, the mouse, or camera-based hand tracking. Changes made in Blender are reviewed and reconciled back into the 2D plan.</p>
+<p>Finished work exports as game-ready packages for Godot, covering houses, furniture, weapons, and props. Studio also prepares prototypes for 3D printing and hands the sliced file to the printer software. Unreal and Unity adapters are planned. No physical print has been run yet.</p>
+<details><summary>Explore Studio</summary><div class="detail-body"><h4>How it works</h4>
+<ol class="pipeline-steps"><li>Sketch walls, doors, windows, rooms, and levels in 2D at millimetre coordinates.</li><li>Blender builds the geometry through a Python bridge.</li><li>Inspect the build in Studio with the trackpad or hand tracking.</li><li>Review edits made in Blender and reconcile them into the plan.</li><li>Export a Godot package, or prepare a prototype for printing.</li></ol>
+<figure><img src="assets/studio-inspect-800.webp" srcset="assets/studio-inspect-800.webp 800w, assets/studio-inspect-1600.webp 1600w" sizes="(max-width: 720px) 90vw, (max-width: 900px) calc(88vw - 220.8px), (max-width: 1200px) calc(88vw - 280px), 776px" alt="The built house on Studio’s turntable stage beside an assembly list of its 39 parts" width="1600" height="1040" loading="lazy" decoding="async"><figcaption>Inspecting the geometry Blender built, part by part.</figcaption></figure>
+<h4>Inspecting with the hands</h4><p>Hand tracking reads the camera with MediaPipe and runs locally. Zoom, move, and rotate the build with gestures, or use the trackpad, mouse, and keyboard instead.</p>
+<h4>Game-ready export</h4><p>A Godot package carries the source objects, materials, and explicit collision geometry in metres. Gameplay, wrapper scenes, and material overrides stay owned by the engine, so a later source update does not overwrite them. Import has not been verified inside Godot yet.</p>
+<figure><img src="assets/studio-engine-export-800.webp" srcset="assets/studio-engine-export-800.webp 800w, assets/studio-engine-export-1600.webp 1600w" sizes="(max-width: 720px) 90vw, (max-width: 900px) calc(88vw - 220.8px), (max-width: 1200px) calc(88vw - 280px), 776px" alt="Studio’s engine export dialog showing a prepared Godot package and its contents" width="1600" height="1040" loading="lazy" decoding="async"><figcaption>Preparing a Godot package from the same source.</figcaption></figure>
+<h4>Prototypes for printing</h4><p>Parts are arranged on the plate, sliced with real printer profiles, and reviewed layer by layer before handoff. Profiles cover the Bambu A1 mini, A1, P2S, and H2D, and the Prusa CORE One.</p>
+<figure><img src="assets/studio-print-plate-800.webp" srcset="assets/studio-print-plate-800.webp 800w, assets/studio-print-plate-1600.webp 1600w" sizes="(max-width: 720px) 90vw, (max-width: 900px) calc(88vw - 220.8px), (max-width: 1200px) calc(88vw - 280px), 776px" alt="Three parts staged for slicing on Studio’s turntable, inside the square print-plate outline" width="1600" height="1000" loading="lazy" decoding="async"><figcaption>A print-path test fixture staged and sliced, on a 256 by 256 mm plate.</figcaption></figure>
+<h4>Under the hood</h4><p>A Swift and AppKit host around a WKWebView renderer, with a three.js viewport using physically based materials, reflections, and real units. A Metal viewport adapter is in progress behind a flag. Apple Silicon only.</p>
+<p>External AI coding clients such as Codex, Claude Code, and Gemini CLI operate Studio through its tool interface. There is no chat inside the app.</p>
+<p>Projects save atomically to native files, and saved versions keep the provenance of their source. The test matrix covers 22 UI workflows in both Chrome and WebKit. More than 700 unit tests and the backend suites run alongside it, Swift included. A real Blender roundtrip serves as the acceptance run.</p>
+<h4>Current focus</h4><p>Finishing the Metal viewport and running a first prototype through a printer. Physical accuracy is still unverified. There is no notarized release yet.</p>
+</div></details>
+</div></div></article>
 
 <article class="project" id="the-order">
 <figure class="project-image"><div class="hunter-frame"><img src="assets/the-order-hunter-selected-800.webp" srcset="assets/the-order-hunter-selected-800.webp 800w, assets/the-order-hunter-selected-1600.webp 1600w" sizes="(max-width: 720px) 100vw, (max-width: 1200px) 98vw, 1176px" alt="The Hunter attacking the player in The Order" width="1600" height="1039" loading="lazy" decoding="async"></div><figcaption>The Hunter</figcaption></figure>

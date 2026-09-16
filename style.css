@@ -56,6 +56,7 @@ main { width: min(88%, 66rem); margin: auto; }
 .project { margin-bottom: 4.5rem; }
 .project-image { margin-bottom: 1.7rem; }
 .project-image img { display: block; width: 100%; height: auto; max-height: 36rem; object-fit: cover; object-position: center; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); }
+#studio .project-image img { max-height: none; object-fit: contain; }
 .project-image figcaption, .detail-body figcaption { margin-top: .5rem; color: var(--muted); font-size: .8rem; }
 .project-copy { display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: 2.5rem; align-items: start; }
 .project-copy > div { min-width: 0; }
@@ -217,3 +218,8 @@ footer > p { color: var(--ink); }
 /* Frame the supplied gameplay screenshot inside its recorded picture area. */
 .hunter-frame { position: relative; overflow: hidden; aspect-ratio: 2714 / 1700; border: 1px solid var(--line); border-radius: 3px; }
 #the-order .hunter-frame img { position: absolute; width: 111.4223%; max-width: none; height: auto; max-height: none; left: -6.4112%; top: -9.7059%; border: 0; border-radius: 0; transform: none; }
+
+/* number the studio pipeline steps using the existing mono metadata scale. */
+.pipeline-steps { list-style: none; margin: .45rem 0 0; padding: 0; counter-reset: step; }
+.pipeline-steps li { display: grid; grid-template-columns: 1.4rem minmax(0, 1fr); gap: .7rem; padding: .25rem 0; color: var(--muted); }
+.pipeline-steps li::before { counter-increment: step; content: counter(step); font: .8rem/1.75rem var(--mono); color: var(--accent); text-align: right; }
