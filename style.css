@@ -218,4 +218,3 @@ footer > p { color: var(--ink); }
 .hunter-frame { position: relative; overflow: hidden; aspect-ratio: 2714 / 1700; border: 1px solid var(--line); border-radius: 3px; }
 #the-order .hunter-frame img { position: absolute; width: 111.4223%; max-width: none; height: auto; max-height: none; left: -6.4112%; top: -9.7059%; border: 0; border-radius: 0; transform: none; }
 
-.pipeline-steps li { display: grid; grid-template-columns: 1.4rem minmax(0, 1fr); gap: .7rem; padding: .25rem 0; color: var(--muted); }
