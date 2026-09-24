@@ -18,14 +18,6 @@
 <div class="section-heading"><h2 id="security-heading">Security research</h2><p>April 2026 to present</p></div>
 <div class="research-overview"><p>Security research across web applications and enterprise software. Stored XSS leading to account takeover in NASA’s GLOBE platform.</p><p>Top 15 in Keeper Security’s Hall of Fame. $12,000 in bounties. More than 30 vulnerabilities reported across 18 programs.</p><a href="https://bugcrowd.com/karl001">Bugcrowd profile</a></div>
 <div class="security-writeups" aria-label="Selected security findings">
-<article class="security-finding" id="gcp-clone-items" aria-labelledby="gcp-clone-heading">
-<div class="finding-meta"><p class="finding-vendor">Google VRP</p><p class="finding-severity">High</p><p class="finding-status">Unresolved</p></div>
-<div class="finding-story"><h3 id="gcp-clone-heading">Cross-tenant read in Google Cloud Network Security</h3><p class="finding-deck">Reported a broken access control in Google Cloud’s Network Security API. The addressGroups.cloneItems call enforced only the update permission on the destination group and skipped the documented read permission on the caller-named source, so a principal with no access to another project or organization could copy any address group’s IPv4/IPv6, CIDR and FQDN allow-deny lists into its own group and read them back, exposing another tenant’s firewall configuration.</p><p class="finding-deck">Demonstrated end to end at three scopes: cross-project, project-to-organization, and cross-organization between separate Cloud Identity customers, with an automated proof of concept. The read leaves no entry in the victim’s logs. CVSS 7.7 (High).</p></div>
-</article>
-<article class="security-finding" id="gerrit-on-behalf-of" aria-labelledby="gerrit-onbehalf-heading">
-<div class="finding-meta"><p class="finding-vendor">Google OSS VRP</p><p class="finding-severity">Medium</p><p class="finding-status">Unresolved</p></div>
-<div class="finding-story"><h3 id="gerrit-onbehalf-heading">Gerrit on_behalf_of authorization bypass</h3><p class="finding-deck">Reported an authorization bypass in Gerrit Code Review. The reviewer-removal endpoint honored an on_behalf_of identity without checking the caller’s global RUN_AS capability, so an ordinary reader could act as another user and delete a decisive Code-Review +2 or blocking −2 vote, changing whether a change is submittable. With a separate submit grant, an attacker could clear a veto on their own change and merge it.</p><p class="finding-deck">Demonstrated end to end against Gerrit v3.14.2 in a clean-room reproduction using only synthetic accounts, with a proposed RUN_AS check and regression tests.</p></div>
-</article>
 <article class="security-finding" id="sql-injection" aria-labelledby="sql-injection-heading">
 <div class="finding-meta"><p class="finding-vendor">Keeper Security</p><p class="finding-severity">High (P2)</p><p class="finding-status">Resolved</p></div>
 <div class="finding-story"><h3 id="sql-injection-heading">SQL injection leading to account takeover</h3><p class="finding-deck">Fixed a SQL injection issue in an automated database password management service. The issue allowed an unauthorized password change on a separate database account, leading to account takeover. The fix separated user-controlled values from database commands.</p></div>
@@ -40,7 +32,7 @@
 </article>
 <article class="security-finding" id="nasa-stored-xss" aria-labelledby="nasa-finding-heading">
 <div class="finding-meta"><p class="finding-vendor">NASA</p><p class="finding-severity">High (P2)</p><p class="finding-status">Unresolved</p></div>
-<div class="finding-story"><h3 id="nasa-finding-heading">Stored XSS leading to account takeover</h3><p class="finding-deck">Validated a high-severity stored XSS issue in NASA’s GLOBE platform that led to an authenticated session for another account. The report remains unresolved.</p><a class="writeup-link" href="/research/nasa-stored-xss/">View writeup <span aria-hidden="true">→</span></a></div>
+<div class="finding-story"><h3 id="nasa-finding-heading">Stored XSS leading to account takeover</h3><p class="finding-deck">Validated a high-severity stored XSS issue in NASA’s GLOBE platform that led to an authenticated session for another account. The report remains unresolved.</p></div>
 </article>
 </div></section>
 <section id="work" aria-labelledby="work-heading">
