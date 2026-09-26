@@ -54,9 +54,6 @@ main { width: min(88%, 66rem); margin: auto; }
 .finding-story h3 { max-width: 29ch; font-size: clamp(1.65rem, 2.7vw, 2.3rem); line-height: 1.2; letter-spacing: -.025em; }
 .finding-deck { color: var(--muted); margin-top: .7rem; max-width: 64ch; }
 .project { margin-bottom: 4.5rem; }
-.project-image { margin-bottom: 1.7rem; }
-.project-image img { display: block; width: 100%; height: auto; max-height: 36rem; object-fit: cover; object-position: center; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); }
-.project-image figcaption, .detail-body figcaption { margin-top: .5rem; color: var(--muted); font-size: .8rem; }
 .project-copy { display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: 2.5rem; align-items: start; }
 .project-copy > div { min-width: 0; }
 .project-copy h3 { font-size: 2.3rem; line-height: 1.15; letter-spacing: -.035em; }
@@ -71,10 +68,6 @@ main { width: min(88%, 66rem); margin: auto; }
 .project summary { color: var(--accent); cursor: pointer; padding: .3rem 0; width: fit-content; font-size: .9rem; }
 .project summary:hover { text-decoration: underline; }
 .detail-body { padding-top: 1rem; }
-.detail-body h4 { margin: 1.4rem 0 .45rem; font-size: 1rem; font-weight: 600; }
-.detail-body h4:first-child { margin-top: 0; }
-.detail-body figure { margin-top: 1.5rem; }
-.detail-body img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 3px; }
 .text-project { border-top: 1px solid var(--line); padding-top: 2.2rem; }
 .prompt-example { margin: 1.5rem 0; padding: 1.2rem 1.4rem; background: var(--surface); border-left: 2px solid var(--line); }
 .prompt-example .example-label { font-size: .8rem; margin-bottom: .5rem; }
@@ -126,8 +119,6 @@ footer > p { color: var(--ink); }
   .finding-meta > p + p { margin: 0; }
   .finding-story h3 { font-size: 1.85rem; }
   .project { margin-bottom: 3rem; }
-  .project-image { margin-bottom: 1.25rem; }
-  .project-image img { max-height: none; }
   .project-copy, .experience-entry { grid-template-columns: 1fr; gap: 1.2rem; }
   .project-copy h3 { font-size: 2.1rem; }
   .project-kind { display: inline-block; margin-right: 1rem; }
@@ -153,11 +144,5 @@ footer > p { color: var(--ink); }
   .security-finding:hover { border-top-color: var(--accent); }
   .finding-story h3 { transition: transform .2s ease; }
   .security-finding:hover .finding-story h3 { transform: translateX(3px); }
-  .project-image img { transition: transform .4s ease, border-color .25s ease; }
-  .project-image:hover img { transform: translateY(-3px); border-color: var(--accent); }
 }
-
-/* Frame the supplied gameplay screenshot inside its recorded picture area. */
-.hunter-frame { position: relative; overflow: hidden; aspect-ratio: 2714 / 1700; border: 1px solid var(--line); border-radius: 3px; }
-#the-order .hunter-frame img { position: absolute; width: 111.4223%; max-width: none; height: auto; max-height: none; left: -6.4112%; top: -9.7059%; border: 0; border-radius: 0; transform: none; }
 

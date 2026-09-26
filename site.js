@@ -59,7 +59,7 @@ if (!motionPreference.matches && 'IntersectionObserver' in window && Element.pro
       animation.finished.then(() => animations.delete(animation), () => animations.delete(animation));
     }
   }, { threshold: .1 });
-  document.querySelectorAll('.security-finding, .project-image').forEach(element => reveal.observe(element));
+  document.querySelectorAll('.security-finding').forEach(element => reveal.observe(element));
   motionPreference.addEventListener('change', event => {
     if (!event.matches) return;
     reveal.disconnect();
