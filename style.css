@@ -71,10 +71,6 @@ main { width: min(88%, 66rem); margin: auto; }
 .project summary:hover { text-decoration: underline; }
 .detail-body { padding-top: 1rem; }
 .text-project { border-top: 1px solid var(--line); padding-top: 2.2rem; }
-.prompt-example { margin: 1.5rem 0; padding: 1.2rem 1.4rem; background: var(--surface); border-left: 2px solid var(--line); }
-.prompt-example .example-label { font-size: .8rem; margin-bottom: .5rem; }
-.prompt-example code { font: .9rem/1.7 var(--mono); overflow-wrap: anywhere; }
-.prompt-example p:last-child { margin-top: .65rem; font-size: .9rem; }
 .experience-entry { display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: 2.5rem; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid var(--line); }
 .experience-entry:last-child { border-bottom: 0; }
 .experience-entry h3 { font-size: 1.65rem; line-height: 1.25; letter-spacing: -.02em; }
