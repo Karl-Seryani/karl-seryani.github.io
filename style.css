@@ -53,6 +53,8 @@ main { width: min(88%, 66rem); margin: auto; }
 .finding-story { min-width: 0; }
 .finding-story h3 { max-width: 29ch; font-size: clamp(1.65rem, 2.7vw, 2.3rem); line-height: 1.2; letter-spacing: -.025em; }
 .finding-deck { color: var(--muted); margin-top: .7rem; max-width: 64ch; }
+.finding-shot { margin-top: 1.3rem; max-width: 32rem; }
+.finding-shot img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }
 .project { margin-bottom: 4.5rem; }
 .project-copy { display: grid; grid-template-columns: 15rem minmax(0, 1fr); gap: 2.5rem; align-items: start; }
 .project-copy > div { min-width: 0; }
