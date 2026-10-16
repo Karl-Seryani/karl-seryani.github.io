@@ -6,7 +6,7 @@
 <meta name="description" content="Karl Seryani, bug bounty researcher and HTB Certified Web Exploitation Specialist (CWES). Security research, software, and projects.">
 <meta name="theme-color" content="#101214">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="style.css?v=no-betterprompt-1">
+<link rel="stylesheet" href="style.css?v=google-bdr-1">
 <link rel="canonical" href="https://karl-seryani.github.io/">
 </head>
 <body>
@@ -16,8 +16,12 @@
 <section class="hero" aria-labelledby="name-heading"><div class="hero-copy"><h1 id="name-heading">Karl Seryani</h1><p class="intro">Bug bounty researcher. <span>CWES certified.</span></p><div class="hero-links"><a href="mailto:karlseryani@gmail.com">Email me</a><a href="https://github.com/Karl-Seryani">GitHub</a><a href="https://www.linkedin.com/in/karlseryani">LinkedIn</a><a href="https://www.credly.com/badges/754b86be-3909-43e1-b980-5ab812c9e6cb/linked_in_profile" aria-label="View Hack The Box CWES certification">HTB CWES</a></div></div></section>
 <section class="experience-section" id="security" aria-labelledby="security-heading">
 <div class="section-heading"><h2 id="security-heading">Security research</h2><p>April 2026 to present</p></div>
-<div class="research-overview"><p>Security research across web applications and enterprise software. Stored XSS leading to account takeover in NASA’s GLOBE platform.</p><p>Top 15 in Keeper Security’s Hall of Fame. $12,000 in bounties. More than 30 vulnerabilities reported across 18 programs.</p><a href="https://bugcrowd.com/karl001">Bugcrowd profile</a></div>
+<div class="research-overview"><p>Security research across web applications, enterprise software, and Google Cloud. Stored XSS leading to account takeover in NASA’s GLOBE platform.</p><p>Top 15 in Keeper Security’s Hall of Fame. $12,000 in bounties. More than 50 vulnerabilities reported across 18 programs.</p><a href="https://bugcrowd.com/karl001">Bugcrowd profile</a></div>
 <div class="security-writeups" aria-label="Selected security findings">
+<article class="security-finding" id="google-backup-dr" aria-labelledby="google-backup-dr-heading">
+<div class="finding-meta"><p class="finding-vendor">Google Cloud</p><p class="finding-severity">Cloud VRP</p><p class="finding-status">Accepted</p></div>
+<div class="finding-story"><h3 id="google-backup-dr-heading">Cross-project disk access in Backup and DR</h3><p class="finding-deck">Found an authorization issue in Google Cloud Backup and DR. A user could add another project in the same organization to their own backup policy without permission on that project. The next scheduled backup copied that project’s disk into the user’s backup vault. The user then restored the disk and read its files.</p><p class="finding-deck">Google triaged the report one day after submission and accepted it.</p><figure class="finding-shot finding-shot-tall"><img src="assets/findings/google-backup-dr-cross-project.webp" alt="Redacted Google Bug Hunters report card: Backup and DR issue allowing cross-project enrollment and disclosure of another project’s disk contents, Accepted" width="1318" height="1022" loading="lazy" decoding="async"></figure></div>
+</article>
 <article class="security-finding" id="sql-injection" aria-labelledby="sql-injection-heading">
 <div class="finding-meta"><p class="finding-vendor">Keeper Security</p><p class="finding-severity">High (P2)</p><p class="finding-status">Resolved</p></div>
 <div class="finding-story"><h3 id="sql-injection-heading">SQL injection leading to account takeover</h3><p class="finding-deck">Fixed a SQL injection issue in an automated database password management service. The issue allowed an unauthorized password change on a separate database account, leading to account takeover. The fix separated user-controlled values from database commands.</p><figure class="finding-shot"><img src="assets/findings/keeper-sql-injection.webp" alt="Redacted Bugcrowd report card: Keeper Gateway SQL injection leading to database-account takeover, P2, Resolved" width="1068" height="402" loading="lazy" decoding="async"></figure></div>
@@ -37,6 +41,13 @@
 </div></section>
 <section id="work" aria-labelledby="work-heading">
 <div class="section-heading"><h2 id="work-heading">Selected work</h2><p>Research</p></div>
+<article class="project text-project research-project" id="multi-agent-testing">
+<div class="project-copy"><div><h3>Multi-agent security testing</h3><p class="project-kind">AI security tooling</p><p class="project-kind">April 2026 to present</p></div><div>
+<p class="lead">A multi-agent workflow that finds cloud vulnerabilities and tries to disprove them.</p>
+<p>The workflow maps cloud APIs, runs tests, and challenges every positive result. It turned more than 1,500 test ideas into 11 Google Cloud vulnerability reports. Google triaged 3 reports and accepted 1.</p>
+<p>A critic agent must fail to disprove each finding before the finding goes into a report. The researcher, hunter, and critic roles each run on a separate AI model.</p>
+<details><summary>How it works</summary><div class="detail-body"><p>A SQLite database stores each finding and test idea under a unique ID. The agents ask the database for only the data they need. This replaced a large Markdown file, so each run uses fewer tokens and costs less.</p><p>A Python request tool checks every request against a 220-rule host allowlist. It blocks out-of-scope and duplicate tests and saves more than 3,100 experiments as proof that anyone can replay.</p><p>Built with Python, SQLite, and Claude Code.</p></div></details>
+</div></div></article>
 <article class="project text-project research-project" id="ai-research">
 <div class="project-copy"><div><h3>An invented security lab</h3><p class="project-kind">AI security case study</p><p class="project-kind">April 2026</p></div><div>
 <p class="lead">How an assistant handled an unverified lab claim.</p>
@@ -50,8 +61,7 @@
 <div class="section-heading"><h2 id="experience-heading">Experience</h2></div>
 
 <article class="experience-entry"><div><h3>OWASP ZAP</h3><p class="date">Open source contributor</p></div><div><p>Three merged contributions to a widely used web security scanner: example alerts and tests for three scan rules, plus simpler alert-building code.</p><ul class="contribution-links"><li><a href="https://github.com/zaproxy/zap-extensions/pull/7288">LDAP injection example alerts</a></li><li><a href="https://github.com/zaproxy/zap-extensions/pull/7249">Username enumeration example alert</a></li><li><a href="https://github.com/zaproxy/zap-extensions/pull/7224">SQLite injection example alerts</a></li></ul></div></article>
-<article class="experience-entry" id="hatchloom"><div><h3>Hatchloom Inc.</h3><p class="date">Software Developer Intern</p></div><div><p>Delivered a production-ready learning and community platform for desktop, tablet, and mobile.</p><p>Built the Node.js and PostgreSQL backend for accounts and content, with secure sign-in and role-based access. Automated deployments to AWS EC2.</p></div></article>
-<article class="experience-entry"><div><h3>Kaimz Inc.</h3><p class="date">Cybersecurity intern<br>January to April 2025</p></div><div><p>Reduced manual security alert review time by about 35% through automated sorting and routing.</p><p>Work also covered log analysis, detection rules, and gaps in the team’s monitoring.</p></div></article>
+<article class="experience-entry"><div><h3>Kaimz Inc.</h3><p class="date">SOC Analyst<br>January to April 2025</p></div><div><p>Built a Python integration between Wazuh and the Jira REST API. It creates a Jira ticket for each high-severity alert, with the alert severity and a short summary. This removed manual ticket entry.</p><p>Configured Wazuh firewall rules to block malicious IP addresses on monitored endpoints. Analyzed suspicious attachments in VirusTotal, ANY.RUN, and Hybrid Analysis to confirm malware.</p></div></article>
 </section>
 <section class="about-section" id="about" aria-labelledby="about-heading"><div class="section-heading"><h2 id="about-heading">About</h2></div><div class="about-copy"><p>Computer science graduate from Western University, with work spanning web security and software development.</p><p>Graduated in April 2026 with two Dean’s Honour List recognitions. Earned the HTB Certified Web Exploitation Specialist certification in July 2026.</p><a href="assets/KarlSeryani.pdf">Read my resume</a></div></section>
 <footer><p>Karl Seryani</p><a href="mailto:karlseryani@gmail.com">karlseryani@gmail.com</a><a href="#top">Back to top</a></footer>
